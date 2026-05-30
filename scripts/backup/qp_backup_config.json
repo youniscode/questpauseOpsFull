@@ -1,0 +1,435 @@
+{
+  "backupRoot": "C:\\QuestPauseOps\\backups",
+  "logRoot": "C:\\QuestPauseOps\\logs\\backup",
+  "stateRoot": "C:\\QuestPauseOps\\state\\backup",
+  "servers": [
+    {
+      "enabled": true,
+      "serverKey": "projectzomboid_main",
+      "displayName": "Project Zomboid Main",
+      "game": "projectzomboid",
+      "sourcePaths": [
+        "C:\\Users\\%USERNAME%\\Zomboid\\Saves",
+        "C:\\Users\\%USERNAME%\\Zomboid\\Server"
+      ],
+      "backupTypes": [
+        "hourly",
+        "daily",
+        "manual"
+      ],
+      "defaultHourlyIntervalHours": 6,
+      "defaultDailyTime": "04:00",
+      "keepHourly": 24,
+      "keepDaily": 7,
+      "keepManual": 12,
+      "backupMode": "robocopy",
+      "vssFallbackToRobocopy": false,
+      "compressDaily": true,
+      "compressManual": false,
+      "compressionLevel": "Optimal",
+      "verifyAfterBackup": true,
+      "discordAlerts": {
+        "enabled": true,
+        "webhookEnv": "WEBHOOK_STATUS",
+        "alertOn": [
+          "failed",
+          "warning"
+        ],
+        "mentionOnFailed": false
+      },
+      "remoteReplication": {
+        "enabled": false,
+        "mode": "robocopy",
+        "targetPath": "D:\\QuestPauseBackupsRemote",
+        "copyTypes": [
+          "daily"
+        ],
+        "keepRemoteDaily": 14
+      }
+    },
+    {
+      "enabled": true,
+      "serverKey": "valheim_main",
+      "displayName": "Valheim Main",
+      "game": "valheim",
+      "sourcePaths": [
+        "C:\\QuestPauseOps\\servers\\valheim_main\\saves",
+        "C:\\QuestPauseOps\\servers\\valheim_main\\configs"
+      ],
+      "backupTypes": [
+        "hourly",
+        "daily",
+        "manual"
+      ],
+      "defaultHourlyIntervalHours": 6,
+      "defaultDailyTime": "04:00",
+      "keepHourly": 24,
+      "keepDaily": 7,
+      "keepManual": 12,
+      "backupMode": "robocopy",
+      "vssFallbackToRobocopy": false,
+      "compressDaily": true,
+      "compressManual": false,
+      "compressionLevel": "Optimal",
+      "verifyAfterBackup": true,
+      "discordAlerts": {
+        "enabled": true,
+        "webhookEnv": "WEBHOOK_STATUS",
+        "alertOn": [
+          "failed",
+          "warning"
+        ],
+        "mentionOnFailed": false
+      },
+      "remoteReplication": {
+        "enabled": false,
+        "mode": "robocopy",
+        "targetPath": "D:\\QuestPauseBackupsRemote",
+        "copyTypes": [
+          "daily"
+        ],
+        "keepRemoteDaily": 14
+      }
+    },
+    {
+      "enabled": true,
+      "serverKey": "minecraft_survival",
+      "displayName": "Minecraft Survival",
+      "game": "minecraft",
+      "sourcePaths": [
+        "C:\\QuestPauseOps\\servers\\minecraft_survival\\world",
+        "C:\\QuestPauseOps\\servers\\minecraft_survival\\world_nether",
+        "C:\\QuestPauseOps\\servers\\minecraft_survival\\world_the_end",
+        "C:\\QuestPauseOps\\servers\\minecraft_survival\\plugins",
+        "C:\\QuestPauseOps\\servers\\minecraft_survival\\server.properties"
+      ],
+      "backupTypes": [
+        "hourly",
+        "daily",
+        "manual"
+      ],
+      "defaultHourlyIntervalHours": 6,
+      "defaultDailyTime": "04:00",
+      "keepHourly": 24,
+      "keepDaily": 7,
+      "keepManual": 12,
+      "backupMode": "robocopy",
+      "note": "VSS recommended for locked-file safety but not enabled by default",
+      "vssFallbackToRobocopy": true,
+      "compressDaily": true,
+      "compressManual": false,
+      "compressionLevel": "Optimal",
+      "verifyAfterBackup": true,
+      "discordAlerts": {
+        "enabled": true,
+        "webhookEnv": "WEBHOOK_STATUS",
+        "alertOn": [
+          "failed",
+          "warning"
+        ],
+        "mentionOnFailed": false
+      },
+      "remoteReplication": {
+        "enabled": false,
+        "mode": "robocopy",
+        "targetPath": "D:\\QuestPauseBackupsRemote",
+        "copyTypes": [
+          "daily"
+        ],
+        "keepRemoteDaily": 14
+      }
+    },
+    {
+      "enabled": false,
+      "needsPathReview": false,
+      "reviewNote": "Paths exist. Disabled because valheim_pro tasks show Disabled status — not currently running.",
+      "serverKey": "valheim_pro",
+      "displayName": "Valheim Pro",
+      "game": "valheim",
+      "sourcePaths": [
+        "C:\\QuestPauseOps\\servers\\valheim_pro\\saves",
+        "C:\\QuestPauseOps\\servers\\valheim_pro\\configs"
+      ],
+      "backupTypes": [
+        "hourly",
+        "daily",
+        "manual"
+      ],
+      "defaultHourlyIntervalHours": 6,
+      "defaultDailyTime": "04:00",
+      "keepHourly": 24,
+      "keepDaily": 7,
+      "keepManual": 12,
+      "backupMode": "robocopy",
+      "vssFallbackToRobocopy": false,
+      "compressDaily": true,
+      "compressManual": false,
+      "compressionLevel": "Optimal",
+      "verifyAfterBackup": true,
+      "discordAlerts": {
+        "enabled": false,
+        "webhookEnv": "WEBHOOK_STATUS",
+        "alertOn": [
+          "failed",
+          "warning"
+        ],
+        "mentionOnFailed": false
+      },
+      "remoteReplication": {
+        "enabled": false,
+        "mode": "robocopy",
+        "targetPath": "D:\\QuestPauseBackupsRemote",
+        "copyTypes": [
+          "daily"
+        ],
+        "keepRemoteDaily": 14
+      }
+    },
+    {
+      "enabled": true,
+      "needsPathReview": false,
+      "reviewNote": "ICARUS Elysium backup path confirmed.",
+      "serverKey": "icarus_elysium",
+      "displayName": "ICARUS Elysium",
+      "game": "icarus",
+      "sourcePaths": [
+        "C:\\WindowsGSM\\servers\\7\\serverfiles\\Icarus\\Saved"
+      ],
+      "backupTypes": [
+        "hourly",
+        "daily",
+        "manual"
+      ],
+      "defaultHourlyIntervalHours": 12,
+      "defaultDailyTime": "04:00",
+      "keepHourly": 12,
+      "keepDaily": 7,
+      "keepManual": 12,
+      "backupMode": "robocopy",
+      "vssFallbackToRobocopy": false,
+      "compressDaily": true,
+      "compressManual": false,
+      "compressionLevel": "Optimal",
+      "verifyAfterBackup": true
+    },
+    {
+      "enabled": false,
+      "needsPathReview": true,
+      "reviewNote": "ICARUS backup path needs review before enabling.",
+      "serverKey": "icarus_olympus",
+      "displayName": "ICARUS Olympus",
+      "game": "icarus",
+      "sourcePaths": [],
+      "backupTypes": [
+        "hourly",
+        "daily",
+        "manual"
+      ],
+      "defaultHourlyIntervalHours": 12,
+      "defaultDailyTime": "04:00",
+      "keepHourly": 12,
+      "keepDaily": 7,
+      "keepManual": 12,
+      "backupMode": "robocopy",
+      "vssFallbackToRobocopy": false,
+      "compressDaily": true,
+      "compressManual": false,
+      "compressionLevel": "Optimal",
+      "verifyAfterBackup": true,
+      "discordAlerts": {
+        "enabled": false,
+        "webhookEnv": "WEBHOOK_STATUS",
+        "alertOn": [
+          "failed",
+          "warning"
+        ],
+        "mentionOnFailed": false
+      },
+      "remoteReplication": {
+        "enabled": false,
+        "mode": "robocopy",
+        "targetPath": "D:\\QuestPauseBackupsRemote",
+        "copyTypes": [
+          "daily"
+        ],
+        "keepRemoteDaily": 14
+      }
+    },
+    {
+      "enabled": false,
+      "needsPathReview": true,
+      "reviewNote": "ICARUS backup path needs review before enabling.",
+      "serverKey": "icarus_prometheus",
+      "displayName": "ICARUS Prometheus",
+      "game": "icarus",
+      "sourcePaths": [],
+      "backupTypes": [
+        "hourly",
+        "daily",
+        "manual"
+      ],
+      "defaultHourlyIntervalHours": 12,
+      "defaultDailyTime": "04:00",
+      "keepHourly": 12,
+      "keepDaily": 7,
+      "keepManual": 12,
+      "backupMode": "robocopy",
+      "vssFallbackToRobocopy": false,
+      "compressDaily": true,
+      "compressManual": false,
+      "compressionLevel": "Optimal",
+      "verifyAfterBackup": true,
+      "discordAlerts": {
+        "enabled": false,
+        "webhookEnv": "WEBHOOK_STATUS",
+        "alertOn": [
+          "failed",
+          "warning"
+        ],
+        "mentionOnFailed": false
+      },
+      "remoteReplication": {
+        "enabled": false,
+        "mode": "robocopy",
+        "targetPath": "D:\\QuestPauseBackupsRemote",
+        "copyTypes": [
+          "daily"
+        ],
+        "keepRemoteDaily": 14
+      }
+    },
+    {
+      "enabled": false,
+      "needsPathReview": true,
+      "reviewNote": "ICARUS backup path needs review before enabling.",
+      "serverKey": "icarus_styx",
+      "displayName": "ICARUS Styx",
+      "game": "icarus",
+      "sourcePaths": [],
+      "backupTypes": [
+        "hourly",
+        "daily",
+        "manual"
+      ],
+      "defaultHourlyIntervalHours": 12,
+      "defaultDailyTime": "04:00",
+      "keepHourly": 12,
+      "keepDaily": 7,
+      "keepManual": 12,
+      "backupMode": "robocopy",
+      "vssFallbackToRobocopy": false,
+      "compressDaily": true,
+      "compressManual": false,
+      "compressionLevel": "Optimal",
+      "verifyAfterBackup": true,
+      "discordAlerts": {
+        "enabled": false,
+        "webhookEnv": "WEBHOOK_STATUS",
+        "alertOn": [
+          "failed",
+          "warning"
+        ],
+        "mentionOnFailed": false
+      },
+      "remoteReplication": {
+        "enabled": false,
+        "mode": "robocopy",
+        "targetPath": "D:\\QuestPauseBackupsRemote",
+        "copyTypes": [
+          "daily"
+        ],
+        "keepRemoteDaily": 14
+      }
+    },
+    {
+      "enabled": false,
+      "needsPathReview": true,
+      "reviewNote": "Path C:\\QuestPauseOps\\servers\\7dtd_main\\serverfiles\\Saves does not exist yet. Saves are created on first server start. Found Saves.zip archives in server root — may need extraction or server start.",
+      "serverKey": "7dtd_main",
+      "displayName": "7 Days to Die Main",
+      "game": "7dtd",
+      "sourcePaths": [
+        "C:\\QuestPauseOps\\servers\\7dtd_main\\serverfiles\\Saves"
+      ],
+      "backupTypes": [
+        "hourly",
+        "daily",
+        "manual"
+      ],
+      "defaultHourlyIntervalHours": 6,
+      "defaultDailyTime": "04:00",
+      "keepHourly": 24,
+      "keepDaily": 7,
+      "keepManual": 12,
+      "backupMode": "robocopy",
+      "vssFallbackToRobocopy": false,
+      "compressDaily": true,
+      "compressManual": false,
+      "compressionLevel": "Optimal",
+      "verifyAfterBackup": true,
+      "discordAlerts": {
+        "enabled": false,
+        "webhookEnv": "WEBHOOK_STATUS",
+        "alertOn": [
+          "failed",
+          "warning"
+        ],
+        "mentionOnFailed": false
+      },
+      "remoteReplication": {
+        "enabled": false,
+        "mode": "robocopy",
+        "targetPath": "D:\\QuestPauseBackupsRemote",
+        "copyTypes": [
+          "daily"
+        ],
+        "keepRemoteDaily": 14
+      }
+    },
+    {
+      "enabled": false,
+      "needsPathReview": false,
+      "reviewNote": "Path exists (Program Files\\Windrose). Disabled because Windrose server directory not under QuestPauseOps management. No QP watchdog scripts for it.",
+      "serverKey": "windrose_main",
+      "displayName": "Windrose Main",
+      "game": "windrose",
+      "sourcePaths": [
+        "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Windrose Dedicated Server"
+      ],
+      "backupTypes": [
+        "hourly",
+        "daily",
+        "manual"
+      ],
+      "defaultHourlyIntervalHours": 6,
+      "defaultDailyTime": "04:00",
+      "keepHourly": 24,
+      "keepDaily": 7,
+      "keepManual": 12,
+      "backupMode": "robocopy",
+      "vssFallbackToRobocopy": false,
+      "compressDaily": true,
+      "compressManual": false,
+      "compressionLevel": "Optimal",
+      "verifyAfterBackup": true,
+      "discordAlerts": {
+        "enabled": false,
+        "webhookEnv": "WEBHOOK_STATUS",
+        "alertOn": [
+          "failed",
+          "warning"
+        ],
+        "mentionOnFailed": false
+      },
+      "remoteReplication": {
+        "enabled": false,
+        "mode": "robocopy",
+        "targetPath": "D:\\QuestPauseBackupsRemote",
+        "copyTypes": [
+          "daily"
+        ],
+        "keepRemoteDaily": 14
+      }
+    }
+  ]
+}
