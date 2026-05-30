@@ -1,0 +1,100 @@
+@'
+# ============================================================
+# QUESTPAUSE FULL ROOT - SAFETY .gitignore
+# This repo must not contain live secrets, runtime data, saves,
+# logs, backups, generated reports, or server binaries.
+# ============================================================
+
+# Secrets
+.env
+*.env
+*.secret
+*.secrets
+*secret*
+*secrets*
+*token*
+*tokens*
+*webhook*
+*.cred
+*.creds
+*.credentials
+
+# Live machine config - DO NOT COMMIT RAW
+/config/
+/profiles/
+/run/
+
+# Runtime / generated data
+/state/
+/runtime/
+/reports/
+/logs/
+/backups/
+/Servers_backups/
+/archive/
+/_archive_runtime/
+
+# Game server data / binaries / saves
+/servers/
+serverfiles/
+steamapps/
+workshop/
+Saves/
+saves/
+world/
+world_nether/
+world_the_end/
+mods/
+plugins/
+*.db
+*.sqlite
+*.sqlite3
+
+# Watchdog runtime/generated data
+/scripts/watchdog/.env
+/scripts/watchdog/state/
+/scripts/watchdog/runtime/
+/scripts/watchdog/reports/
+/scripts/watchdog/logs/
+/scripts/watchdog/backups/
+/scripts/watchdog/dist/
+/scripts/watchdog/node_modules/
+/scripts/watchdog/profiles/questpause/
+
+# IMPORTANT:
+# Watchdog is already its own Git repository.
+# Do not add it blindly from the parent repo.
+# We can later convert it to a submodule or keep it separate.
+/scripts/watchdog/
+
+# Scheduled task exports often contain absolute paths and user SID
+scheduled_tasks/
+task_xml_backups/
+*/scheduled_tasks/
+*/task_xml_backups/
+
+# Backups / compressed archives
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.bak
+*.backup
+*.tmp
+*.cache
+*.jsonl
+*.log
+
+# Node / build output
+node_modules/
+dist/
+build/
+.cache/
+
+# Windows / IDE
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+'@ | Set-Content .\.gitignore -Encoding UTF8
